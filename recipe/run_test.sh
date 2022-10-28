@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -ex
+
 # Check for recent enough version of bash.
 # This is the same check used in the integration script
 if [ ${BASH_VERSINFO[0]} -gt 4 ] || \

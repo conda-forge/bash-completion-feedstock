@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -ex
+
 autoreconf -i
 ./configure --prefix=$PREFIX
 make
