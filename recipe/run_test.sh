@@ -8,7 +8,7 @@ if [ ${BASH_VERSINFO[0]} -gt 4 ] || \
     [ ${BASH_VERSINFO[0]} -eq 4 -a ${BASH_VERSINFO[1]} -ge 1 ]; then
 
     # Remove stray completion file in docker image
-    rm -f /etc/bash_completion.d/yum-utils.bash
+    alias yum='true'
 
     # Ensure the library loads without error at least
     bash -e bash_completion
