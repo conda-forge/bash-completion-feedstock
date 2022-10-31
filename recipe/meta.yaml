@@ -19,13 +19,14 @@ source:
     - double-load-trap.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
     - autoconf
     - automake
+    - make
 
 test:
   source_files:
@@ -43,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - tartansandal
+    - matthiasdiener
