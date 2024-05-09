@@ -1,5 +1,5 @@
 {% set name = "bash-completion" %}
-{% set version = "2.11" %}
+{% set version = "2.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/scop/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 16adefabf43ec8ffb473704f5724d775c2f47e9f750d7d608f0251ec21fe8813
+  sha256: a68995ccd80278adcd08635cc046344c30406ff918b030a4d025acdd2aff5a19
   patches:
     # add a conda specific library loaded flag
     - track-conda-loaded.patch
@@ -19,7 +19,7 @@ source:
     - double-load-trap.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
