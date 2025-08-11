@@ -30,9 +30,11 @@ requirements:
 test:
   source_files:
     - bash_completion
-
   requires:
     - bash >=4.1
+  commands:
+    # Ensure the library loads without error at least
+    - bash -e bash_completion
 
 about:
   home: https://github.com/scop/bash-completion
