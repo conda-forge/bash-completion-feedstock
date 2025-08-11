@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/scop/bash-completion/archive/{{ version }}.tar.gz
-  sha256: fdf718cbf1fa355715776834c7734608776dc5903db819ef7cd5b557ee38646d
+  sha256: c4d7edf0b035d8f6ed33294380326bde1fb8a4a8e24699566d545b4276141cc2
   patches:
     # add a conda specific library loaded flag
     - track-conda-loaded.patch
