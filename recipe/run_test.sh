@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
+echo hello world
 set -ex
 
 # Check for recent enough version of bash.
