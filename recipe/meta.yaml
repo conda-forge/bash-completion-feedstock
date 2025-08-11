@@ -33,9 +33,11 @@ test:
   requires:
     - bash >=4.1
   commands:
+    - echo "starting tests"
+    - echo "bash -e bash_completion"
     # Ensure the library loads without error at least
     - bash -e bash_completion
-
+    - echo "tests completed"
 about:
   home: https://github.com/scop/bash-completion
   license: GPL-2.0-only
