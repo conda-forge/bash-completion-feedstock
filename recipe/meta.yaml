@@ -1,12 +1,11 @@
-{% set name = "bash-completion" %}
-{% set version = "2.15.0" %}
+{% set version = "2.16.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: bash-completion
   version: {{ version }}
 
 source:
-  url: https://github.com/scop/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/scop/bash-completion/archive/{{ version }}.tar.gz
   sha256: fdf718cbf1fa355715776834c7734608776dc5903db819ef7cd5b557ee38646d
   patches:
     # add a conda specific library loaded flag
@@ -45,3 +44,4 @@ extra:
   recipe-maintainers:
     - tartansandal
     - matthiasdiener
+    - hmaarrfk
