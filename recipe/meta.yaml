@@ -9,13 +9,13 @@ source:
   sha256: c4d7edf0b035d8f6ed33294380326bde1fb8a4a8e24699566d545b4276141cc2
   patches:
     # add a conda specific library loaded flag
-    - track-conda-loaded.patch
+    - 0001-Track-Conda-Loaded.patch
 
     # search for completions in the conda environment
-    - completions-path.patch
+    - 0002-Add-to-completitions-path.patch
 
     # adjust double load trap to use conda specific
-    - double-load-trap.patch
+    - 0003-Double-load-trap.patch
 
 build:
   number: 0

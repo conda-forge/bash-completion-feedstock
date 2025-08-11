@@ -1,0 +1,26 @@
+From d78177f651630fd66a801603f5b4757eb1bcacf7 Mon Sep 17 00:00:00 2001
+From: Mark Harfouche <mark.harfouche@gmail.com>
+Date: Mon, 11 Aug 2025 11:58:45 -0400
+Subject: [PATCH 2/3] Add to completitions path
+
+---
+ bash_completion | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/bash_completion b/bash_completion
+index 47adbf1..e94807f 100644
+--- a/bash_completion
++++ b/bash_completion
+@@ -3282,6 +3282,9 @@ _comp_load()
+         dirs=("${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion/completions")
+     fi
+ 
++    # Add completions relative to anaconda's relocatable install path
++    dirs+=( /opt/anaconda1anaconda2anaconda3/share/bash-completion/completions )
++
+     # 2) From the location of bash_completion: Completions relative to the main
+     # script. This is primarily for run-in-place-from-git-clone setups, where
+     # we want to prefer in-tree completions over ones possibly coming with a
+-- 
+2.43.0
+

@@ -1,0 +1,25 @@
+From 90fc846ce27a2d7893ee3441ca3d87f0d85d8788 Mon Sep 17 00:00:00 2001
+From: Mark Harfouche <mark.harfouche@gmail.com>
+Date: Mon, 11 Aug 2025 11:59:27 -0400
+Subject: [PATCH 3/3] Double load trap
+
+not authored by me, but using this to better track patches
+---
+ bash_completion.sh.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bash_completion.sh.in b/bash_completion.sh.in
+index a3bba6f..3633459 100644
+--- a/bash_completion.sh.in
++++ b/bash_completion.sh.in
+@@ -1,6 +1,6 @@
+ # shellcheck shell=sh disable=SC1091,SC2166,SC2268,SC3028,SC3044,SC3054
+ # Check for interactive bash and that we haven't already been sourced.
+-if [ "x${BASH_VERSION-}" != x -a "x${PS1-}" != x -a "x${BASH_COMPLETION_VERSINFO-}" = x ]; then
++if [ "x${BASH_VERSION-}" != x -a "x${PS1-}" != x -a "x${CONDA_BASH_COMPLETION_LOADED-}" = x ]; then
+ 
+     # Check for recent enough version of bash.
+     if [ "${BASH_VERSINFO[0]}" -gt 4 ] ||
+-- 
+2.43.0
+
