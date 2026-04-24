@@ -2,6 +2,10 @@
 
 set -ex
 
+# Replace /opt/anaconda1... with the prefix
+# use , instead of / to allow the / in the PATH
+sed -i.bak "s,/opt/anaconda1anaconda2anaconda3,${PREFIX},g" bash_completion
+
 autoreconf -i
 ./configure --prefix=$PREFIX
 make
